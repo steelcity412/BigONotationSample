@@ -11,3 +11,16 @@ C:\Users\evan.warren\Downloads\BigONotationSample\obj\Debug\netcoreapp3.1\BigONo
 C:\Users\evan.warren\Downloads\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.dll
 C:\Users\evan.warren\Downloads\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.pdb
 C:\Users\evan.warren\Downloads\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.genruntimeconfig.cache
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\bin\Debug\netcoreapp3.1\BigONotationSample.exe
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\bin\Debug\netcoreapp3.1\BigONotationSample.deps.json
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\bin\Debug\netcoreapp3.1\BigONotationSample.runtimeconfig.json
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\bin\Debug\netcoreapp3.1\BigONotationSample.runtimeconfig.dev.json
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\bin\Debug\netcoreapp3.1\BigONotationSample.dll
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\bin\Debug\netcoreapp3.1\BigONotationSample.pdb
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.csprojAssemblyReference.cache
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.csproj.CoreCompileInputs.cache
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.AssemblyInfoInputs.cache
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.AssemblyInfo.cs
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.dll
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.pdb
+C:\Users\evan.warren\Documents\GitHub\BigONotationSample\BigONotationSample\obj\Debug\netcoreapp3.1\BigONotationSample.genruntimeconfig.cache

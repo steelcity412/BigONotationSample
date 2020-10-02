@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\evan.warren\\Downloads\\BigONotationSample\\BigONotationSample.csproj": {}
+    "C:\\Users\\evan.warren\\Documents\\GitHub\\BigONotationSample\\BigONotationSample\\BigONotationSample.csproj": {}
   },
   "projects": {
-    "C:\\Users\\evan.warren\\Downloads\\BigONotationSample\\BigONotationSample.csproj": {
+    "C:\\Users\\evan.warren\\Documents\\GitHub\\BigONotationSample\\BigONotationSample\\BigONotationSample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\evan.warren\\Downloads\\BigONotationSample\\BigONotationSample.csproj",
+        "projectUniqueName": "C:\\Users\\evan.warren\\Documents\\GitHub\\BigONotationSample\\BigONotationSample\\BigONotationSample.csproj",
         "projectName": "BigONotationSample",
-        "projectPath": "C:\\Users\\evan.warren\\Downloads\\BigONotationSample\\BigONotationSample.csproj",
+        "projectPath": "C:\\Users\\evan.warren\\Documents\\GitHub\\BigONotationSample\\BigONotationSample\\BigONotationSample.csproj",
         "packagesPath": "C:\\Users\\evan.warren\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\evan.warren\\Downloads\\BigONotationSample\\obj\\",
+        "outputPath": "C:\\Users\\evan.warren\\Documents\\GitHub\\BigONotationSample\\BigONotationSample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

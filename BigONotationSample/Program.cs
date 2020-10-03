@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace BigONotationSample
@@ -7,11 +8,15 @@ namespace BigONotationSample
     {
         static void Main(string[] args)
         {
+            Random rand = new Random();
+            
             string[] arr = { "John", "Jane", "Evan" };
             string[] arr2 = { "Evan", "Peter", "Eric" };
 
-            int[] numbers = { 1, 40, 25, 76, 20, 3, 34 };
+            int[] numbers = { 1,12, 56, 32, 4, 67, 8 };
+            int[] numbers2 = { 10, 17, 25, 35, 52, 55, 62, 77, 90, 95 };
 
+            List<int> list = new List<int> { 1, 2, 3, 4, 5 };
 
             Console.WriteLine("1.) O(1) algorithm: " + isMyNameEvan("Evan"));
             Console.WriteLine("2.) O(N) algorithm: " + isMyNameEvan(arr,"Evan"));
@@ -26,11 +31,16 @@ namespace BigONotationSample
                 Console.Write(n + " ");
             Console.WriteLine("\nSorted Array: ");
             numbers = bubbleSort(numbers);
-            foreach (int n in numbers)
+            foreach (int n in bubbleSort(numbers))
                 Console.Write(n + " ");
             
             Console.WriteLine("\n");
 
+            Console.WriteLine("Original Array: ");
+            foreach (var n in numbers)
+                Console.Write(n + " ");
+            Console.WriteLine("\n");
+            Console.WriteLine("Binary Search: The number {0} is found at index {1}", numbers2[7], Program.binarySearch(numbers2, numbers2[7]));
         }
 
         static bool isMyNameEvan(string input)
@@ -83,7 +93,7 @@ namespace BigONotationSample
             
             for (int i = 0; i < arr.Length - 2; i++)
             {
-                for (int j = 0; j < arr.Length - 2; j++)
+                for (int j = 0; j < arr.Length - i - 1; j++)
                 {
                     if(arr[j] > arr[j + 1])
                     {
@@ -93,8 +103,51 @@ namespace BigONotationSample
                     }
                 }
             }
-            int[] newArr = arr;
-            return newArr;
+            return arr;
+        }
+
+        static object binarySearch(int[] list, int valueToBeSearched)
+        {
+            int minNum = 0;
+            int maxNum = list.Length - 1;
+
+            while (minNum <= maxNum)
+            {
+                int mid = (minNum + maxNum) / 2;
+                Console.WriteLine("{0} = ({1} + {2}) / 2", "mid","minNum", "maxNum");
+                Console.WriteLine("{0} = ({1} + {2}) / 2", mid, minNum, maxNum);
+                Console.WriteLine("Mid = " + mid);
+                Console.WriteLine("\n");
+
+                if (valueToBeSearched == list[mid])
+                {
+                    Console.WriteLine("\t{0} == {1}", "valueToBeSearched", "list[mid]");
+                    Console.WriteLine("\t{0} == {1}", valueToBeSearched, list[mid]);
+                    Console.WriteLine("\t{0} = {1}", "mid", ++mid);
+                    Console.WriteLine("\n");
+                    return --mid;
+                }
+                else if ( valueToBeSearched < list[mid])
+                {
+                    Console.WriteLine("\t{0} < {1}", "valueToBeSearched", "list[mid]");
+                    Console.WriteLine("\t{0} < {1}", valueToBeSearched, list[mid]);
+                    Console.WriteLine("\t{0} = {1} - 1", "maxNum", "mid");
+                    maxNum = mid - 1;
+                    Console.WriteLine("\t{0} = {1} - 1", maxNum, mid);
+                    Console.WriteLine("\n");
+                    
+                }
+                else
+                {
+                    Console.WriteLine("\t{0} > {1}", "valueToBeSearched", "list[mid]");
+                    Console.WriteLine("\t{0} > {1}", valueToBeSearched, list[mid]);
+                    Console.WriteLine("\t{0} = {1} + 1", "minNum", "mid");
+                    minNum = mid + 1;
+                    Console.WriteLine("\t{0} = {1} + 1", minNum, mid);
+                    Console.WriteLine("\n");
+                }
+            }
+            return "None";
         }
     }
 }

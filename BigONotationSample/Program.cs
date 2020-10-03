@@ -13,8 +13,9 @@ namespace BigONotationSample
             string[] arr = { "John", "Jane", "Evan" };
             string[] arr2 = { "Evan", "Peter", "Eric" };
 
-            int[] numbers = { 1,12, 56, 32, 4, 67, 8 };
+            int[] numbers = { 1, 12, 56, 32, 4, 67, 8 };
             int[] numbers2 = { 10, 17, 25, 35, 52, 55, 62, 77, 90, 95 };
+            int[] numbers3 = { 34, 78, 56, 100, 78 };
 
             List<int> list = new List<int> { 1, 2, 3, 4, 5 };
 
@@ -25,24 +26,49 @@ namespace BigONotationSample
 
             Console.WriteLine("\n");
 
+            #region Bubble Sort algorithm
             Console.WriteLine("Another example of O(N^2) is a Bubble Sort!");
             Console.WriteLine("Original Array: ");
             foreach (int n in numbers)
+            {
                 Console.Write(n + " ");
+            }
             Console.WriteLine("\nSorted Array: ");
-            numbers = bubbleSort(numbers);
             foreach (int n in bubbleSort(numbers))
+            {
                 Console.Write(n + " ");
+            }
             
             Console.WriteLine("\n");
+            #endregion
 
+            #region Binary Search algorithm -> O(log n)
             Console.WriteLine("Original Array: ");
-            foreach (var n in numbers)
+            foreach (var n in numbers2)
+            {
                 Console.Write(n + " ");
+            }
             Console.WriteLine("\n");
             Console.WriteLine("Binary Search: The number {0} is found at index {1}", numbers2[7], Program.binarySearch(numbers2, numbers2[7]));
-        }
+            #endregion
 
+            #region Merge Sort alogrithm -> O(n log n)
+
+            Console.WriteLine("\nOriginal Array: ");
+            foreach (var n in numbers3)
+            {
+                Console.Write(n + " ");
+            }
+            Console.WriteLine("\nMerge Sort: ");
+            foreach (int n in Program.MergeSort(numbers3, 0, numbers3.Length - 1))
+            {
+                Console.Write(n + " ");
+            }
+            Console.WriteLine("\n");
+
+            #endregion
+        }
+        
         static bool isMyNameEvan(string input)
         {
             return input == "Evan";
@@ -148,6 +174,52 @@ namespace BigONotationSample
                 }
             }
             return "None";
+        }
+        
+        public static int[] MergeSort(int[] inputItems, int lowerBound, int upperBound)
+        {
+            
+            if (lowerBound < upperBound)
+            {
+                int middle = (lowerBound + upperBound) / 2;
+
+                MergeSort(inputItems, lowerBound, middle);
+                MergeSort(inputItems, middle + 1, upperBound);
+
+                //Merge
+                int[] leftArray = new int[middle - lowerBound + 1];
+                int[] rightArray = new int[upperBound - middle];
+
+                Array.Copy(inputItems, lowerBound, leftArray, 0, middle - lowerBound + 1);
+                Array.Copy(inputItems, middle + 1, rightArray, 0, upperBound - middle);
+
+                int i = 0;
+                int j = 0;
+                for (int count = lowerBound; count < upperBound + 1; count++)
+                {
+                    if (i == leftArray.Length)
+                    {
+                        inputItems[count] = rightArray[j];
+                        j++;
+                    }
+                    else if (j == rightArray.Length)
+                    {
+                        inputItems[count] = leftArray[i];
+                        i++;
+                    }
+                    else if (leftArray[i] <= rightArray[j])
+                    {
+                        inputItems[count] = leftArray[i];
+                        i++;
+                    }
+                    else
+                    {
+                        inputItems[count] = rightArray[j];
+                        j++;
+                    }
+                }
+            }
+            return inputItems;
         }
     }
 }
